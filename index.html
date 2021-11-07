@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./estilo.css">
+
+    <script>
+        function iniciarJogo() {
+            var nivel = document.getElementById('nivel').value
+
+            if(nivel === '') {
+                alert('Selecione um nivel para iniciar o jogo')
+                return false
+            }
+                window.location.href = 'app.html?' + nivel
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <div class="container"><!--INICIO CONTAINER-->
+        <div class="row"><!--INICIO ROW-->
+            <div class="col"><!--INICIO COL -->
+                <div class="d-flex justify-content-center"><!--INICIO CLASS D-FLEX-->
+                <img src="./imagens/game.png">
+                </div><!--FIM CLASS D-FLEX-->
+            </div><!--FIM COL-->
+        </div><!--FIM ROW-->
+
+
+        <div class="row"><!--INICIO ROW NV-->
+            <div class="col"><!--INICIO COL NV -->
+                <div class="d-flex justify-content-center"><!--INICIO CLASS D-FLEX NV-->
+                    <div class="mb-2">    
+                        <select class="form-control" id="nivel">
+                            <option value="">-- Selecionar o Nível --</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Difícil</option>
+                            <option value="chucknorris">Chuck Norris</option>
+                        </select>
+                    </div><!-- FIM MB2 - NV--> 
+                </div><!--FIM CLASS D-FLEX NV-->
+            </div><!--FIM COL NV-->
+        </div><!--FIM ROW NV-->
+
+
+
+
+
+
+        <div class="row"><!--INICIO 2ROW-->
+            <div class="col"><!--INICIO 2COL -->
+                <div class="d-flex justify-content-center"><!--INICIO 2CLASS D-FLEX-->
+                <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+                </div><!--FIM 2CLASS D-FLEX-->
+            </div><!--FIM 2COL-->
+        </div><!--FIM 2ROW-->
+
+
+
+
+    </div><!--FIM CONTAINER-->
+</body>
+</html>
